@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LiveStramActivity">
+
+
+
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary"
+        >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_centerVertical="true"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"/>
+
+        <TextView
+            android:layout_toRightOf="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:text="Live Stream"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:layout_marginLeft="20dp"/>
+
+       &lt;!&ndash; <ImageView
+            android:id="@+id/cast"
+            android:layout_alignParentRight="true"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_back_24"/>&ndash;&gt;
+    </RelativeLayout>-->
+
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:id="@+id/wv_web"></WebView>
+<!--
+    <com.theoplayer.android.api.THEOplayerView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/theoplayer"
+        app:defaultCss="true"
+        app:cssPaths="path/to/style1.css"
+        app:jsPaths="path/to/script1.js"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.theoplayer.android.api.THEOplayerView>
+
+    <Button
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_playpause"
+        android:text="PLAY/PAUSE"
+        app:layout_constraintTop_toBottomOf="@+id/theoplayer"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_playstatus"
+        app:layout_constraintLeft_toRightOf="@+id/btn_playpause"
+        app:layout_constraintTop_toBottomOf="@+id/theoplayer"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_playpause"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_timeupdate"
+        app:layout_constraintLeft_toRightOf="@+id/txt_playstatus"
+        app:layout_constraintTop_toBottomOf="@+id/theoplayer"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_playpause"
+        android:layout_marginLeft="20dp"/>-->
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_height="40dp">
+
+
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20/09/1997"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:id="@+id/date_time"/>
+
+        <TextClock
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="5.40pm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:format12Hour="hh:mm:ss a" />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

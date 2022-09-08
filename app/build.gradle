@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 31
+    defaultConfig {
+        applicationId "com.affinityopus.jl_media"
+        minSdkVersion 18
+        targetSdkVersion 31
+        versionCode 3
+        versionName "2.1"
+
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    signingConfigs {
+        config {
+            storeFile file("jlmedia.jks") // signature file path
+            storePassword "jlmedia"
+            keyAlias "jlmedia"
+            keyPassword "jlmedia"   // signature password
+            v2SigningEnabled false
+        }
+    }
+
+
+
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+//noinspection GradleCompatible
+implementation "com.android.support:support-compat:28.0.0"
+   // implementation 'com.android.support:design:28.0.0-alpha1'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation "androidx.cardview:cardview:1.0.0"
+
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.4'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.google.android.material:material:1.3.0-alpha02'
+
+    //Exoplayer IMA(Interactive Media Ads)
+    implementation ("com.google.android.exoplayer:extension-ima:2.13.3"){
+        exclude module: 'support-v4'
+    }
+
+    implementation 'com.google.code.gson:gson:2.8.2'
+   // implementation(name:'theoplayer-android-dist-8a9d6992-829a-4de8-8499-7b64d2b8cc64-2.83.1-minapi21-release', ext:'aar')
+
+    implementation 'com.google.android.material:material:1.2.0-alpha05'
+    implementation 'androidx.mediarouter:mediarouter:1.2.2'
+
+}
